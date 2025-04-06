@@ -137,7 +137,7 @@ void init_systick_timer(uint32_t tick_hz)
     uint32_t count_value = (SYSTICK_TIM_CLK/tick_hz)-1;
 
     //Clear the value of SVR
-    *pSRVR &= ~(0x00FFFFFFFF);
+    *pSRVR &= ~(0x00FFFFFF);
 
     //load the value in to SVR
     *pSRVR |= count_value;
